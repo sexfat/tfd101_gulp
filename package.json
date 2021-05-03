@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "安裝套件": "npm install",
     "開發": "gulp",
-    "打包": "gulp prod"
+    "打包上線": "gulp prod"
   },
   "repository": {
     "type": "git",
