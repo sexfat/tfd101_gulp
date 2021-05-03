@@ -77,7 +77,7 @@ const browserSync = require('browser-sync');
 const reload = browserSync.reload;
 
 
-exports.default = function browser() {
+function browser() {
     browserSync.init({
         server: {
             baseDir: "./dist",
@@ -90,6 +90,10 @@ exports.default = function browser() {
     watch(['dev/images/*.*', 'dev/images/**/*.*'], imgs_dev).on('change', reload);
     watch('dev/js/*.js', babel5).on('change', reload);
 }
+
+
+// 開發用
+exports.default = series(imgs_dev ,includeHTML , sassStyle  , babel5 , browser)
 
 
 // 打包上線用
