@@ -52,6 +52,8 @@ exports.img = function imgs_prod(){
 } 
 
 
+
+// 同步瀏覽器
 const browserSync = require('browser-sync');
 const reload = browserSync.reload;
 
