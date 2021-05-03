@@ -83,8 +83,7 @@ exports.default = function browser() {
 }
 
 
-
-
+// 打包上線用
 exports.prod = series(clear, parallel(includeHTML, sassStyle), imgs_prod);
 
 
